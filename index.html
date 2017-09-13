@@ -1,0 +1,38 @@
+<html>
+
+<HEAD>
+
+<link rel="stylesheet" href="toto.css"/>
+</HEAD>
+
+<BODY>
+<div id="BUTTONS" class="column left" style="background-color:#fff0d6; width: 190px;">
+  <CENTER><img src="images\main-logo.png" width="175px" alt="VNAHG Logo"></CENTER>
+  <br>
+  <br>
+  <DIV id="NAV_BAR"></DIV>
+</div>
+
+
+<div id="NAV_PANE" class="column right" style="left:195px;">
+</div>
+
+
+<script type="text/javascript" src="toto.js"></script>
+<SCRIPT>
+paintNavBar("NAV_BAR");
+function HashManager()
+ {
+	var x = window.location.hash;
+	if (x != null && x.length > 1 && x[0] == '#')
+	 x = x.substring(1);
+	else
+	 x = "BTN_HOME";
+	openTableau(x);
+  }
+window.addEventListener("hashchange", HashManager, false);
+HashManager();
+</SCRIPT>
+
+</body>
+</html>
